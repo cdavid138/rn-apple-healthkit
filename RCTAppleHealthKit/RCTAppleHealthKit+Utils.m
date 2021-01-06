@@ -324,8 +324,14 @@
             return @"Cycling";
         case HKWorkoutActivityTypeDance:
             return @"Dance";
+        case HKWorkoutActivityTypeCardioDance:
+            return @"CardioDance";
+        case HKWorkoutActivityTypeSocialDance:
+            return @"SocialDance";
         case HKWorkoutActivityTypeDanceInspiredTraining:
             return @"DanceInspiredTraining";
+        case HKWorkoutActivityTypeDiscSports:
+            return @"DiskSports";
         case HKWorkoutActivityTypeElliptical:
             return @"Elliptical";
         case HKWorkoutActivityTypeEquestrianSports:
@@ -414,6 +420,8 @@
             return @"Other";
         case HKWorkoutActivityTypeBarre:
             return @"Barre";
+        case HKWorkoutActivityTypeCooldown:
+            return @"Cooldown";
         case HKWorkoutActivityTypeCoreTraining:
             return @"CoreTraining";
         case HKWorkoutActivityTypeCrossCountrySkiing:
@@ -422,6 +430,8 @@
             return @"DownhillSkiing";
         case HKWorkoutActivityTypeFlexibility:
             return @"Flexibility";
+        case HKWorkoutActivityTypeFitnessGaming:
+            return @"FitnessGaming";
         case HKWorkoutActivityTypeHighIntensityIntervalTraining:
             return @"HighIntensityIntervalTraining";
         case HKWorkoutActivityTypeJumpRope:
@@ -430,6 +440,8 @@
             return @"Kickboxing";
         case HKWorkoutActivityTypePilates:
             return @"Pilates";
+        case HKWorkoutActivityTypePickleball:
+            return @"Pickleball";
         case HKWorkoutActivityTypeSnowboarding:
             return @"Snowboarding";
         case HKWorkoutActivityTypeStairs:
@@ -446,13 +458,8 @@
             return @"MixedCardio";
         case HKWorkoutActivityTypeHandCycling:
             return @"HandCycling";
-        default:{
-            NSException *e = [NSException
-                              exceptionWithName:@"HKWorkoutActivityType InvalidValue"
-                              reason:@"HKWorkoutActivityType can only have a value from the HKWorkoutActivityType enum"
-                              userInfo:nil];
-            @throw e;
-        }
+        default:
+            return @"Other";
     }
 }
 
